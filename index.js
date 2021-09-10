@@ -14,7 +14,9 @@ app.set('view engine', 'ejs');
 var expressLayouts = require('express-ejs-layouts');
 app.use(expressLayouts);
 app.use(express.static('public'))
-
+async function startSharing() {
+  window.alert("here");
+}
 async function apiRequest(endpoint, payload = {}, method = 'POST') {
   var url = `https://${process.env.SIGNALWIRE_SPACE}${endpoint}`
 
